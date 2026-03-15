@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Harry Potter ⚡</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#0b0b2b;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* fondo */
+
+.banner{
+background-image:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
+background-size:cover;
+background-position:center;
+padding:90px;
+text-shadow:2px 2px 6px black;
+}
+
+/* estrellas */
+
+.star{
+position:fixed;
+width:3px;
+height:3px;
+background:white;
+animation:brillar 3s infinite;
+}
+
+@keyframes brillar{
+0%{opacity:0}
+50%{opacity:1}
+100%{opacity:0}
+}
+
+/* menú */
+
+nav{
+background:black;
+padding:15px;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:gold;
+}
+
+/* contenedor */
+
+.contenedor{
+width:85%;
+margin:auto;
+}
+
+.articulo{
+background:white;
+color:black;
+padding:25px;
+margin:25px;
+border-radius:12px;
+box-shadow:0px 5px 15px rgba(0,0,0,0.4);
+}
+
+/* personajes */
+
+.personajes{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.tarjeta{
+background:white;
+width:220px;
+padding:15px;
+border-radius:12px;
+box-shadow:0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.tarjeta img{
+width:100%;
+border-radius:10px;
+}
+
+/* tabla */
+
+table{
+margin:auto;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid black;
+padding:10px;
+}
+
+th{
+background:#444;
+color:white;
+}
+
+/* datos izquierda */
+
+#datos ul{
+text-align:left;
+margin-left:40px;
+}
+
+/* trivia izquierda */
+
+#trivia{
+text-align:left;
+}
+
+/* barra progreso */
+
+#barra{
+width:100%;
+background:#ddd;
+height:20px;
+border-radius:10px;
+}
+
+#progreso{
+height:20px;
+background:green;
+width:0%;
+border-radius:10px;
+}
+
+/* botón */
+
+button{
+background:purple;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:darkmagenta;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="banner">
+
+<h1>Harry Potter ⚡</h1>
+<p>Explora el mundo mágico de Hogwarts</p>
+
+</header>
+
+<nav>
+<a href="#personajes">Personajes</a>
+<a href="#casas">Casas</a>
+<a href="#datos">Datos</a>
+<a href="#trivia">Trivia</a>
+<a href="#sombrero">Sombrero</a>
+<a href="#formulario">Fans</a>
+</nav>
+
+<div class="contenedor">
+
+<div class="articulo">
+
+<h2>¿Quién es Harry Potter?</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Harry_Potter_character_poster.jpg" width="250">
+
+<p>
+Harry Potter es el protagonista de la saga creada por J.K. Rowling.
+Es conocido como el niño que sobrevivió al ataque de Voldemort.
+</p>
+
+</div>
+
+<div class="articulo">
+
+<h2 id="personajes">Personajes</h2>
+
+<div class="personajes">
+
+<div class="tarjeta">
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Harry_Potter_character_poster.jpg">
+<h3>Harry Potter</h3>
+</div>
+
+<div class="tarjeta">
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d3/Hermione_Granger_poster.jpg">
+<h3>Hermione</h3>
+</div>
+
+<div class="tarjeta">
+<img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Ron_Weasley_poster.jpg">
+<h3>Ron</h3>
+</div>
+
+</div>
+
+</div>
+
+<div class="articulo">
+
+<h2 id="casas">Casas de Hogwarts</h2>
+
+<table>
+
+<tr>
+<th>Casa</th>
+<th>Color</th>
+</tr>
+
+<tr>
+<td>Gryffindor</td>
+<td>Rojo</td>
+</tr>
+
+<tr>
+<td>Slytherin</td>
+<td>Verde</td>
+</tr>
+
+<tr>
+<td>Ravenclaw</td>
+<td>Azul</td>
+</tr>
+
+<tr>
+<td>Hufflepuff</td>
+<td>Amarillo</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="articulo" id="datos">
+
+<h2>Datos curiosos</h2>
+
+<ul>
+<li>La cicatriz de Harry tiene forma de rayo</li>
+<li>El tren sale del andén 9¾</li>
+<li>El deporte mágico es el Quidditch</li>
+<li>El patronus de Harry es un ciervo</li>
+<li>Hogwarts tiene cuatro casas</li>
+</ul>
+
+</div>
+
+<div class="articulo" id="trivia">
+
+<h2>Trivia</h2>
+
+<form id="quiz">
+
+<p>1. Mejor amigo de Harry</p>
+<input type="radio" name="p1" value="1"> Ron
+<input type="radio" name="p1" value="0"> Draco
+
+<p>2. Escuela de magia</p>
+<input type="radio" name="p2" value="1"> Hogwarts
+<input type="radio" name="p2" value="0"> Durmstrang
+
+<p>3. Enemigo principal</p>
+<input type="radio" name="p3" value="1"> Voldemort
+<input type="radio" name="p3" value="0"> Snape
+
+<p>4. Mascota de Harry</p>
+<input type="radio" name="p4" value="1"> Búho
+<input type="radio" name="p4" value="0"> Gato
+
+<p>5. Deporte mágico</p>
+<input type="radio" name="p5" value="1"> Quidditch
+<input type="radio" name="p5" value="0"> Futbol
+
+<p>6. Director</p>
+<input type="radio" name="p6" value="1"> Dumbledore
+<input type="radio" name="p6" value="0"> Hagrid
+
+<p>7. Casa de Harry</p>
+<input type="radio" name="p7" value="1"> Gryffindor
+<input type="radio" name="p7" value="0"> Slytherin
+
+<p>8. Patronus</p>
+<input type="radio" name="p8" value="1"> Ciervo
+<input type="radio" name="p8" value="0"> Perro
+
+<p>9. Plataforma del tren</p>
+<input type="radio" name="p9" value="1"> 9¾
+<input type="radio" name="p9" value="0"> 8
+
+<p>10. Amiga inteligente</p>
+<input type="radio" name="p10" value="1"> Hermione
+<input type="radio" name="p10" value="0"> Luna
+
+<br><br>
+
+<button type="button" onclick="calcular()">Lanzar hechizo ⚡</button>
+
+</form>
+
+<br>
+
+<div id="barra">
+<div id="progreso"></div>
+</div>
+
+<h3 id="resultado"></h3>
+
+</div>
+
+<div class="articulo" id="sombrero">
+
+<h2>Sombrero seleccionador</h2>
+
+<button onclick="casa()">Descubrir mi casa</button>
+
+<h3 id="casa"></h3>
+
+</div>
+
+<div class="articulo" id="formulario">
+
+<h2>Formulario de fans</h2>
+
+<label>Nombre</label><br>
+<input type="text"><br><br>
+
+<label>Edad</label><br>
+<input type="number"><br><br>
+
+<label>Casa favorita</label><br>
+
+<select>
+<option>Gryffindor</option>
+<option>Slytherin</option>
+<option>Ravenclaw</option>
+<option>Hufflepuff</option>
+</select>
+
+<br><br>
+
+<label>Personaje favorito</label><br>
+<input type="text"><br><br>
+
+<button onclick="fan()">Enviar</button>
+
+<h3>Fans registrados: <span id="fans">0</span></h3>
+
+</div>
+
+<div class="articulo">
+
+<h2>QR de la página</h2>
+
+<img id="qr">
+
+</div>
+
+</div>
+
+<script>
+
+/* estrellas */
+
+for(let i=0;i<80;i++){
+let s=document.createElement("div")
+s.className="star"
+s.style.top=Math.random()*100+"%"
+s.style.left=Math.random()*100+"%"
+document.body.appendChild(s)
+}
+
+/* trivia */
+
+function calcular(){
+
+let total=0
+let form=document.getElementById("quiz")
+
+for(let i=1;i<=10;i++){
+
+let p=form["p"+i]
+
+for(let j=0;j<p.length;j++){
+
+if(p[j].checked){
+total+=parseInt(p[j].value)
+}
+
+}
+
+}
+
+let porcentaje=total*10
+
+document.getElementById("progreso").style.width=porcentaje+"%"
+
+let mensaje=""
+
+if(total>=9){
+mensaje="Eres un verdadero mago 🧙‍♂️"
+}
+else if(total>=6){
+mensaje="Sabes bastante del mundo mágico ✨"
+}
+else{
+mensaje="Debes ver más Harry Potter ⚡"
+}
+
+document.getElementById("resultado").innerHTML=
+"Puntaje: "+total+"/10<br>"+mensaje
+
+}
+
+/* sombrero */
+
+function casa(){
+
+let casas=["Gryffindor","Slytherin","Ravenclaw","Hufflepuff"]
+
+let seleccion=casas[Math.floor(Math.random()*4)]
+
+document.getElementById("casa").innerHTML=
+"El sombrero te asigna a: "+seleccion
+
+}
+
+/* contador fans */
+
+let contador = localStorage.getItem("fans")
+
+if(contador == null){
+contador = 0
+}
+
+document.getElementById("fans").innerText = contador
+
+function fan(){
+
+contador++
+
+localStorage.setItem("fans", contador)
+
+document.getElementById("fans").innerText = contador
+
+alert("¡Bienvenido al club de fans de Harry Potter! ⚡")
+
+}
+
+/* QR */
+
+let url="https://TUUSUARIO.github.io/harry-potter-web/"
+
+document.getElementById("qr").src=
+"https://api.qrserver.com/v1/create-qr-code/?size=220x220&data="+url
+
+</script>
+
+</body>
+</html>
