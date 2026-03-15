@@ -181,6 +181,7 @@ background:darkmagenta;
 <a href="#trivia">Trivia</a>
 <a href="#sombrero">Sombrero</a>
 <a href="#formulario">Fans</a>
+<a href="#qr">QR</a>
 </nav>
 
 <div class="contenedor">
@@ -374,11 +375,15 @@ Es conocido como el niño que sobrevivió al ataque de Voldemort.
 
 </div>
 
-<div class="articulo">
+<!-- QR -->
 
-<h2>QR de la página</h2>
+<div class="articulo" id="qr">
 
-<img id="qr">
+<h2>Escanea para entrar a la página</h2>
+
+<p>Si quieres abrir esta página en otro celular, escanea este código QR 📱</p>
+
+<div id="qrcode"></div>
 
 </div>
 
@@ -475,10 +480,12 @@ alert("¡Bienvenido al club de fans de Harry Potter! ⚡")
 
 /* QR */
 
-let url="https://TUUSUARIO.github.io/harry-potter-web/"
+let url="https://dafne334.github.io/harry-potter-web/"
 
-document.getElementById("qr").src=
-"https://api.qrserver.com/v1/create-qr-code/?size=220x220&data="+url
+let qr="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data="+url
+
+document.getElementById("qrcode").innerHTML =
+"<img src='"+qr+"' alt='QR página'>"
 
 </script>
 
